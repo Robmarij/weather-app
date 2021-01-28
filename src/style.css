@@ -1,0 +1,66 @@
+.card {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-color: #1ab2a8;
+  max-width: 550px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #61687b;
+  margin: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #42a5f5;
+}
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #1ab2a8;
+}
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+li {
+  color: #61687b;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  height: 19px;
+  line-height: 1;
+  list-style: none;
+}
+.row {
+  text-align: center;
+}
+.city {
+  font-size: 20px;
+  color: #5a6275;
+}
+.units {
+  font-size: 30px;
+  text-decoration: none;
+}
+.inner-container {
+  padding: 5px;
+  margin: 15px;
+  border: 2px solid #1ab2a8;
+  border-radius: 15px;
+  max-height: fit-content;
+  box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.fa-snowflake {
+  color: #1ab2a8;
+}
+.fa-cloud {
+  color: #1ab2a8;
+}

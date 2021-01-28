@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2708681a1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css" class="css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>
+                    Weather forecast
+                </h1>
+                <form id="enter-form">
+                    <label for="City">
+                        <input type="text" id="text-input" placeholder="Enter the city" class="form-control shadow-sm"
+                            autocomplete="off" />
+                    </label>
+                    <button type="submit" class="btn btn-outline-info w-15" value="Search">Search</button>
+                    <button type="button" class="btn btn-outline-success w-15" id="current-location">Current</button>
+                </form>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="city">
+                            <strong></strong>
+                        </h3>
+                        <div class="col" id="date">
+                            <br>
+                        </div>
+                        <span id="description"></span>
+                    </div>
+                    <div class="col-6" id="description">
+                        <ul>
+                            <li>Feels like: <span id="feels-like"></span>°C</li>
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                            <li>Wind: <span id="wind"></span> km/h</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>
+                <i class="far fa-snowflake"></i>
+                <span class="temperature" id="temperature"></span>
+                <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span>
+            </h2>
+            <p>
+                The citate for the weather...
+            </p>
+            <br>
+            <br>
+            <div class="inner-container">
+                <div class="row" id="forecast">
+                    <div class="col">
+                        Sun
+                    </div>
+                    <div class="col">
+                        Mon
+                    </div>
+                    <div class="col">
+                        Tue
+                    </div>
+                    <div class="col">
+                        Wed
+                    </div>
+                    <div class="col">
+                        Thu
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        2ºC
+                    </div>
+                    <div class="col">
+                        2ºC
+                    </div>
+                    <div class="col">
+                        2ºC
+                    </div>
+                    <div class="col">
+                        2ºC
+                    </div>
+                    <div class="col">
+                        2ºC
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <script src="src/weather.js">
+    </script>
+</body>
+
+</html>
