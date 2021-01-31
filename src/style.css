@@ -64,3 +64,10 @@ li {
 .fa-cloud {
   color: #1ab2a8;
 }
+.Open-source {
+  display: block;
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+}
