@@ -8,6 +8,7 @@ body {
   width: 50%;
   display: block;
   margin: 0 auto;
+  margin-top: 20px;
   background-color: #f2f2f2;
   border-color: #1ab2a8;
   max-width: 500px;
