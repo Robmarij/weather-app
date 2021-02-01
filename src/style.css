@@ -31,7 +31,7 @@ h2 {
 p {
   text-align: center;
   font-size: 18px;
-  color: #1ab2a8;
+  color: #ee9a5a;
 }
 ul {
   margin: 0 0 10px;
@@ -43,8 +43,8 @@ li {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  height: 19px;
-  line-height: 1;
+  height: 23px;
+  line-height: 2;
   list-style: none;
 }
 .row {
@@ -53,10 +53,14 @@ li {
 .city {
   font-size: 20px;
   color: #5a6275;
+  font-weight: 700;
 }
 .units {
   font-size: 30px;
   text-decoration: none;
+}
+.inner-container:hover {
+  color: #ee9a5a;
 }
 .inner-container {
   padding: 5px;
@@ -66,6 +70,8 @@ li {
   max-height: fit-content;
   box-shadow: 0 10px 10px 0 rgba(255, 255, 255, 0.5);
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  transition: all 200ms ease-in-out;
+  opacity: 0.7;
 }
 .fa-snowflake {
   color: #1ab2a8;
