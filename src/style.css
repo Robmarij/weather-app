@@ -56,8 +56,9 @@ li {
   font-weight: 700;
 }
 .units {
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
+  color: #61687b;
 }
 .inner-container:hover {
   color: #ee9a5a;
