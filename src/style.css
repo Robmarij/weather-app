@@ -6,7 +6,6 @@ body {
   margin: 0;
 }
 .card {
-  max-width: 600px;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
@@ -14,6 +13,7 @@ body {
   border: 3px solid #ff9853;
   box-shadow: 1px 1px 10px #4c4442;
   max-width: 500px;
+  max-height: 600px;
   border-radius: 20px;
 }
 
@@ -95,4 +95,8 @@ li {
 }
 .Open-source {
   color: #fff;
+}
+.temperature strong {
+  color: #5a6275;
+  text-decoration: none;
 }
