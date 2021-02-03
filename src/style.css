@@ -96,7 +96,6 @@ li {
 .Open-source {
   color: #fff;
 }
-.temperature strong {
+.temperature small {
   color: #5a6275;
-  text-decoration: none;
 }
