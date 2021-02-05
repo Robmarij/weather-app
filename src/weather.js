@@ -89,3 +89,4 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showLocation);
 
 searchCity("Kaunas");
+//smoke, clear, clouds, Rain, snow
