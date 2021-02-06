@@ -64,6 +64,8 @@ li {
   font-size: 20px;
   text-decoration: none;
   color: #61687b;
+  position: relative;
+  top: -20px;
 }
 .inner-container:hover {
   color: #ee9a5a;
@@ -99,4 +101,5 @@ li {
 }
 .temperature small {
   color: #5a6275;
+  left: -20px;
 }
