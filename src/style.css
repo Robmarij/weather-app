@@ -81,12 +81,6 @@ li {
   transition: all 200ms ease-in-out;
   opacity: 0.7;
 }
-.fa-snowflake {
-  color: #1ab2a8;
-}
-.fa-cloud {
-  color: #1ab2a8;
-}
 .Open-source {
   display: block;
   text-align: center;
@@ -98,7 +92,4 @@ li {
 }
 .Open-source {
   color: #fff;
-}
-.icon {
-  display: inline-block;
 }

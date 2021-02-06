@@ -33,7 +33,7 @@ function convertToCelsius(event) {
 }
 function showTemperature(response) {
   document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".temperature").innerHTML = Math.round(
+  document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#feels-like").innerHTML = Math.round(
