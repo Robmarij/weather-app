@@ -99,7 +99,9 @@ li {
 .Open-source {
   color: #fff;
 }
+.temperature {
+  left: -14px;
+}
 .temperature small {
   color: #5a6275;
-  left: -20px;
 }
