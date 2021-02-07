@@ -74,7 +74,7 @@ function showLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 function citateElement(response){
-  let citate = document.querySelector("#description");
+  let citate = "#decription";
   if (citate === "scattered clouds" || citate === "broken clouds")
   {`A gray day provides the best light - L. da Vinci`;
 } else if (citate === "shower rain" || citate === "rain" || citate === "thunderstorm")
