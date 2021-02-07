@@ -73,6 +73,23 @@ function showLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+function citateElement(){
+  let citate = response.data.weather[0].description;
+  if (citate === "scattered clouds" | citate === "broken clouds");
+  {alert(`A gray day provides the best light - L. da Vinci`);
+} else if (citate === "shower rain" | citate === "rain" | citate === "thunderstorm");
+  {alert(`Without rain nothing grows`);
+} else if( citate === "clear sky" | citate ==="few clouds");
+{alert(`What sunshine is to flower, smiles are to humanity - J. Addison`);
+} else if (citate === "snow");
+{alert(`Kindness is like snow. I beautifies everything it covers - K. Gibran`);
+} else{
+  alert(`If you want to see the sunshine, you have to weather the storm - F. Lane`);
+}
+}
+let weatherCitate = document.querySelector("p");
+weatherCitate.innerHTML = citateElement();
+
 
 let dateElement = document.querySelector("#date");
 let now = new Date();
