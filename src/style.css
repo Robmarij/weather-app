@@ -15,6 +15,7 @@ body {
   max-width: 500px;
   max-height: 600px;
   border-radius: 20px;
+  opacity: 93%;
 }
 
 h1 {
@@ -48,6 +49,9 @@ li {
   line-height: 2;
   list-style: none;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
 .row {
   text-align: center;
 }
@@ -66,6 +70,9 @@ li {
   color: #61687b;
   position: relative;
   top: -20px;
+}
+.celcius-link {
+  text-decoration: none;
 }
 .inner-container:hover {
   color: #ee9a5a;
