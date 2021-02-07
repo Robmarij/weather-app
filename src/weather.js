@@ -73,22 +73,22 @@ function showLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-function citateElement(response){
-  let description = "#decription";
-  if (description === "scattered clouds" || description === "broken clouds")
-  {description = `A gray day provides the best light - L. da Vinci`;
-} else if (description === "shower rain" || description === "rain" || description === "thunderstorm")
-  {description = `Without rain nothing grows`;
-} else if( description === "clear sky" || description ==="few clouds")
-  {description = `What sunshine is to flower, smiles are to humanity - J. Addison`;
-} else if (description === "snow")
-  {description = `Kindness is like snow. I beautifies everything it covers - K. Gibran`;
-} else 
- {description = `If you want to see the sunshine, you have to weather the storm - F. Lane`;
-}
-}
-let weatherCitate = document.querySelector("p");
-weatherCitate.innerHTML = citateElement();
+//function citateElement(){
+  //let description = "#decription";
+  //if (description === "scattered clouds" || description === "broken clouds")
+  //{description = `A gray day provides the best light - L. da Vinci`;
+//} else if (description === "shower rain" || description === "rain" || description === "thunderstorm")
+  //{description = `Without rain nothing grows`;
+//} else if( description === "clear sky" || description ==="few clouds")
+  //{description = `What sunshine is to flower, smiles are to humanity - J. Addison`;
+//} else if (description === "snow")
+  //{description = `Kindness is like snow. I beautifies everything it covers - K. Gibran`;
+//} else 
+ //{description = `If you want to see the sunshine, you have to weather the storm - F. Lane`;
+//}
+//}
+//let weatherCitate = document.querySelector("p");
+//weatherCitate.innerHTML = citateElement();
 
 
 let dateElement = document.querySelector("#date");
@@ -108,4 +108,3 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showLocation);
 
 searchCity("Kaunas");
-//smoke, clear, clouds, Rain, snow
