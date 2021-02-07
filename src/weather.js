@@ -74,17 +74,17 @@ function showLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 function citateElement(response){
-  let citate = "#decription";
-  if (citate === "scattered clouds" || citate === "broken clouds")
-  {`A gray day provides the best light - L. da Vinci`;
-} else if (citate === "shower rain" || citate === "rain" || citate === "thunderstorm")
-  {`Without rain nothing grows`;
-} else if( citate === "clear sky" || citate ==="few clouds")
-  {`What sunshine is to flower, smiles are to humanity - J. Addison`;
-} else if (citate === "snow")
-  {`Kindness is like snow. I beautifies everything it covers - K. Gibran`;
+  let description = "#decription";
+  if (description === "scattered clouds" || description === "broken clouds")
+  {description = `A gray day provides the best light - L. da Vinci`;
+} else if (description === "shower rain" || description === "rain" || description === "thunderstorm")
+  {description = `Without rain nothing grows`;
+} else if( description === "clear sky" || description ==="few clouds")
+  {description = `What sunshine is to flower, smiles are to humanity - J. Addison`;
+} else if (description === "snow")
+  {description = `Kindness is like snow. I beautifies everything it covers - K. Gibran`;
 } else 
- {`If you want to see the sunshine, you have to weather the storm - F. Lane`;
+ {description = `If you want to see the sunshine, you have to weather the storm - F. Lane`;
 }
 }
 let weatherCitate = document.querySelector("p");
