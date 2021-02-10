@@ -21,7 +21,7 @@ function currentTime(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayFahrenheiTemperature(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
