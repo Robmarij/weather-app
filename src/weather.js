@@ -21,12 +21,6 @@ function currentTime(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
-  temperatureElement.innerHTML - Math.round(fahrenheitTemperature);
-}
 function showTemperature(response) {
   document.querySelector(".city").innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
@@ -67,6 +61,12 @@ function searchLocation(position) {
 function showLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+}
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 //function citateElement(response){
   //let description = "response.data.weather[0].description";
