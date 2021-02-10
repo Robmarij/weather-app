@@ -68,6 +68,12 @@ function displayFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+function displayCelsiusTemperature(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 //function citateElement(response){
   //let description = "response.data.weather[0].description";
   //if (description === "scattered clouds" || description === "broken clouds")
@@ -97,6 +103,9 @@ let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let CelsiusLink = document.querySelector("#celsius-link");
+CelsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showLocation);
