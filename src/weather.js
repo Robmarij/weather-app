@@ -21,10 +21,11 @@ function currentTime(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function convertToFahrenheit(event) {
+function displayFahrenheiTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
+  temperatureElement.innerHTML - Math.round(fahrenheitTemperature);
 }
 function convertToCelsius(event) {
   event.preventDefault();
@@ -33,9 +34,8 @@ function convertToCelsius(event) {
 }
 function showTemperature(response) {
   document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
@@ -98,8 +98,10 @@ dateElement.innerHTML = currentTime(now);
 let cityForm = document.querySelector("#enter-form");
 cityForm.addEventListener("submit", enterCity);
 
+let celsiusTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
