@@ -23,6 +23,7 @@ h1 {
   color: #61687b;
   margin: 25px;
   font-family: "Open Sans", sans-serif;
+  text-shadow: 1px 1px 3px #dc9460;
 }
 h2 {
   text-align: center;
