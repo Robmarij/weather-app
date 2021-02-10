@@ -115,4 +115,10 @@ li:first-letter {
 }
 .weather-temperature .activeF {
   text-decoration: none;
+  color: #e09761;
+  cursor: default;
+}
+.weather-temperature .activeF :hover {
+  text-decoration: underline;
+  color: #e09761;
 }
