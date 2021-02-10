@@ -113,6 +113,6 @@ li:first-letter {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
-.weather-temperature .active {
+.weather-temperature .activeF {
   text-decoration: none;
 }
