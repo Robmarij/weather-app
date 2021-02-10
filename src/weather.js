@@ -27,11 +27,6 @@ function displayFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32;
   temperatureElement.innerHTML - Math.round(fahrenheitTemperature);
 }
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
 function showTemperature(response) {
   document.querySelector(".city").innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
@@ -102,9 +97,6 @@ let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showLocation);
