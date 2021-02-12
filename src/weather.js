@@ -58,7 +58,7 @@ function displayForecast(response){
     <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
      alt=""/>
     <div class="weather-forecast-temperature">
-    <strong>${Math.round(forecast.main.temp_max)}</strong>${Math.round(forecast.main.temp_min)}
+    <strong>${Math.round(forecast.main.temp_max)}°</strong>${Math.round(forecast.main.temp_min)}°
   </div>
   </div>`
   }
