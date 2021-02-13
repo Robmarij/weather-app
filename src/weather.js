@@ -1,5 +1,5 @@
 function currentTime(timestamp) {
-  let dayIndex = now.getDay();
+  let date = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -9,17 +9,17 @@ function currentTime(timestamp) {
     "Friday",
     "Saturday"
   ];
-  let day = days[dayIndex];
+  let day = days[date.getDay()];
   return `${day} ${formatHours(timestamp)}`;
 }
 
 function formatHours(timestamp){
   let date = new Date(timestamp);
-  let hours = now.getHours();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = now.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -33,6 +33,7 @@ function showTemperature(response) {
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  document.querySelector("#date").innerHTML(response.data.dt * 1000);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -124,10 +125,6 @@ function displayCelsiusTemperature(event){
 //let weatherCitate = document.querySelector("p");
 //weatherCitate.innerHTML = citateElement();
 
-
-let dateElement = document.querySelector("#date");
-let now = new Date();
-dateElement.innerHTML = currentTime(now);
 
 let cityForm = document.querySelector("#enter-form");
 cityForm.addEventListener("submit", enterCity);
