@@ -68,7 +68,7 @@ li:first-letter {
 .weather-text {
   padding: 10px 0px 0px 0px;
 }
-.units {
+.weather-temperature .units {
   font-size: 20px;
   color: #61687b;
   position: relative;
@@ -115,13 +115,15 @@ li:first-letter {
 }
 .weather-temperature .active:hover {
   text-decoration: none;
+  cursor: default;
 }
+
 .weather-temperature .activeF {
   text-decoration: none;
   color: #e09761;
   cursor: default;
 }
-.weather-temperature .activeF :hover {
+.weather-temperature .activeF:hover {
   text-decoration: underline;
   color: #e09761;
 }
