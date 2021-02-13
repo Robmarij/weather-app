@@ -118,7 +118,7 @@ function citateElement(event){
   {description = `A gray day provides the best light - L. da Vinci`;
 } else if (description === "shower rain" || description === "rain" || description === "thunderstorm" || description === "moderate rain")
   {description = `Without rain nothing grows`;
-} else if( description === "clear sky" || description ==="few clouds")
+} else if( description === "clear sky" || description === "few clouds")
   {description = `What sunshine is to flower, smiles are to humanity - J. Addison`;
 } else if (description === "snow" || description === "light snow")
   {description = `Kindness is like snow. It beautifies everything it covers - K. Gibran`;
