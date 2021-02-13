@@ -82,7 +82,7 @@ li:first-letter {
 }
 .inner-container {
   padding: 5px;
-  margin: 15px;
+  margin: 0px 15px 15px 15px;
   border: 2px solid #1ab2a8;
   border-radius: 15px;
   max-height: fit-content;
@@ -130,4 +130,12 @@ li:first-letter {
 .forecast-icon {
   height: 50px;
   width: 50px;
+}
+.citate {
+  text-decoration: none;
+  color: #e09761;
+  cursor: default;
+}
+.citate:hover {
+  color: #61687b;
 }

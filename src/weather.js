@@ -43,6 +43,7 @@ function showTemperature(response) {
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = currentTime(response.data.dt * 1000);
+  weatherElement = response.data.weather[0].description;
 }
 
 function displayForecast(response){
@@ -110,22 +111,23 @@ function displayCelsiusTemperature(event){
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-//function citateElement(response){
-  //let description = "response.data.weather[0].description";
-  //if (description === "scattered clouds" || description === "broken clouds")
-  //{description = `A gray day provides the best light - L. da Vinci`;
-//} else if (description === "shower rain" || description === "rain" || description === "thunderstorm")
-  //{description = `Without rain nothing grows`;
-//} else if( description === "clear sky" || description ==="few clouds")
-  //{description = `What sunshine is to flower, smiles are to humanity - J. Addison`;
-//} else if (description === "snow" || description === "light snow")
-  //{description = `Kindness is like snow. I beautifies everything it covers - K. Gibran`;
-//} else 
- //{description = `If you want to see the sunshine, you have to weather the storm - F. Lane`;
-//}
-//}
-//let weatherCitate = document.querySelector("p");
-//weatherCitate.innerHTML = citateElement();
+function citateElement(event){
+  event.preventDefault();
+  let description = weatherElement;
+  if (description === "scattered clouds" || description === "broken clouds" || description === "overcast clouds")
+  {description = `A gray day provides the best light - L. da Vinci`;
+} else if (description === "shower rain" || description === "rain" || description === "thunderstorm" || description === "moderate rain")
+  {description = `Without rain nothing grows`;
+} else if( description === "clear sky" || description ==="few clouds")
+  {description = `What sunshine is to flower, smiles are to humanity - J. Addison`;
+} else if (description === "snow" || description === "light snow")
+  {description = `Kindness is like snow. It beautifies everything it covers - K. Gibran`;
+} else 
+ {description = `If you want to see the sunshine, you have to weather the storm - F. Lane`;
+}
+let citateText = document.querySelector(".citate");
+citateText.innerHTML = description;
+}
 
 
 let cityForm = document.querySelector("#enter-form");
@@ -141,5 +143,9 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showLocation);
+
+let weatherElement = null;
+let weatherCitate = document.querySelector(".citate");
+weatherCitate.addEventListener("click", citateElement);
 
 searchCity("Kaunas");
