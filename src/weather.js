@@ -33,7 +33,6 @@ function showTemperature(response) {
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
-  document.querySelector("#date").innerHTML(response.data.dt * 1000);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -42,6 +41,8 @@ function showTemperature(response) {
     response.data.weather[0].description;
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = currentTime(response.data.dt * 1000);
 }
 
 function displayForecast(response){
@@ -49,15 +50,16 @@ function displayForecast(response){
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for(let index = 0; index < 6; index ++){
-  let forecast = response.data.list[index];
+  for(let index = 0; index < 3; index ++){
+  forecast = response.data.list[index];
   forecastElement.innerHTML += `
-  <div class="col-2">
+  <div class="col-4">
      <h3>
      ${formatHours(forecast.dt*1000)}
      </h3>
     <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
-     alt=""/>
+     alt=""
+     class="forecast-icon"/>
     <div class="weather-forecast-temperature">
     <strong>${Math.round(forecast.main.temp_max)}°</strong>${Math.round(forecast.main.temp_min)}°
   </div>

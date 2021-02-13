@@ -125,3 +125,7 @@ li:first-letter {
   text-decoration: underline;
   color: #e09761;
 }
+.forecast-icon {
+  height: 50px;
+  width: 50px;
+}
